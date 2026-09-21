@@ -68,6 +68,10 @@ nav a:hover, nav a:focus-visible, .header-link:hover, .header-link:focus-visible
 .project-copy { padding: clamp(2rem, 5vw, 5rem); display: flex; flex-direction: column; justify-content: center; }
 .project-copy h3 { margin: .4rem 0 1.3rem; font-size: clamp(3rem, 6vw, 6rem); line-height: 1; letter-spacing: -.06em; }
 .project-lead { max-width: 600px; margin: 0; color: #c6cbd2; font-size: 1.15rem; }
+.contribution-note { display: flex; align-items: center; flex-wrap: wrap; gap: .35rem; margin: 1.5rem 0 0 !important; color: var(--muted) !important; font-size: .78rem !important; letter-spacing: .01em; }
+.contribution-note strong { color: var(--text); font-weight: 600; }
+.contribution-note span { color: #59616c; }
+.contribution-note small { margin-left: .25rem; padding: .15rem .45rem; border: 1px solid var(--line); border-radius: 99px; color: var(--accent); font-size: .68rem; }
 .project-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 2.5rem; }
 .button { display: inline-flex; align-items: center; gap: .7rem; min-height: 48px; padding: .7rem 1rem; border: 1px solid var(--line); border-radius: .4rem; cursor: pointer; }
 .button-primary { background: var(--accent); color: var(--accent-dark); border-color: var(--accent); font-weight: 600; }
