@@ -101,6 +101,34 @@ nav a:hover, nav a:focus-visible, .header-link:hover, .header-link:focus-visible
 .card-links a { color: var(--muted); font-size: .78rem; border-bottom: 1px solid var(--line); }
 .card-links a:hover, .card-links a:focus-visible { color: var(--accent); border-color: var(--accent); }
 .section-heading.compact { grid-template-columns: 1fr 3fr; }
+.career-case { margin-bottom: 5rem; background: var(--surface); border: 1px solid var(--line); border-radius: 1rem; overflow: hidden; }
+.career-case-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; padding: 2rem; border-bottom: 1px solid var(--line); }
+.career-case-head h3 { margin: .35rem 0 0; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1; letter-spacing: -.055em; }
+.career-case-meta { text-align: right; color: var(--muted); font-size: .85rem; }
+.career-case-meta p { margin: .15rem 0; }
+.career-case-summary { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; align-items: end; padding: 2rem; }
+.career-case-summary > p { max-width: 760px; margin: 0; font-size: 1.2rem; color: #d4d8de; }
+.career-case-summary .tag-list { justify-content: flex-end; margin: 0; }
+.contribution-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+.contribution-grid > section { min-height: 360px; padding: 2rem; display: flex; flex-direction: column; border-right: 1px solid var(--line); }
+.contribution-grid > section:last-child { border-right: 0; }
+.contribution-grid h4 { margin: .75rem 0 1rem; font-size: 1.65rem; letter-spacing: -.025em; }
+.contribution-grid section > p:not(.detail-label) { max-width: 560px; margin: 0; color: var(--muted); }
+.evidence { margin-top: auto; padding-top: 2.5rem; display: flex; align-items: flex-end; gap: 1rem; }
+.evidence strong { color: var(--accent); font-size: clamp(2.6rem, 5vw, 5rem); line-height: .9; letter-spacing: -.055em; }
+.evidence span { max-width: 150px; color: var(--muted); font-size: .78rem; line-height: 1.4; }
+.evidence-text strong { font-size: clamp(1.8rem, 3.5vw, 3.5rem); }
+.case-details { border-top: 1px solid var(--line); }
+.case-details summary { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; list-style: none; font-size: .9rem; }
+.case-details summary::-webkit-details-marker { display: none; }
+.case-details summary:hover, .case-details summary:focus-visible { color: var(--accent); }
+.case-details[open] summary span { transform: rotate(45deg); }
+.case-details summary span { font-size: 1.3rem; transition: transform .2s; }
+.case-details-body { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; padding: 1rem 2rem 2rem; border-top: 1px solid var(--line); }
+.case-details-body ul { margin: 1rem 0 0; padding-left: 1.2rem; color: #c8cdd3; }
+.case-details-body li + li { margin-top: .55rem; }
+.case-details-body div > p:last-child { color: var(--muted); }
+.career-list-label { margin: 0 0 1rem; color: var(--muted); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; }
 .timeline { border-top: 1px solid var(--line); }
 .timeline-row { display: grid; grid-template-columns: 1fr 1.2fr 2fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--line); }
 .timeline-row > p { margin: 0; color: var(--muted); }
@@ -148,6 +176,8 @@ footer p { margin: 0; }
   .subsection-heading > p { justify-self: start; }
   .timeline-row { grid-template-columns: 1fr 2fr; }
   .timeline-row > p:last-child { grid-column: 2; }
+  .career-case-summary, .case-details-body { grid-template-columns: 1fr; }
+  .career-case-summary .tag-list { justify-content: flex-start; }
 }
 
 @media (max-width: 600px) {
@@ -170,6 +200,14 @@ footer p { margin: 0; }
   .card-bottom { align-items: flex-start; flex-direction: column; }
   .timeline-row { grid-template-columns: 1fr; gap: .75rem; }
   .timeline-row > p:last-child { grid-column: auto; }
+  .career-case-head { align-items: flex-start; flex-direction: column; }
+  .career-case-meta { text-align: left; }
+  .contribution-grid { grid-template-columns: 1fr; }
+  .contribution-grid > section { min-height: 340px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .contribution-grid > section:last-child { border-bottom: 0; }
+  .career-case-head, .career-case-summary, .contribution-grid > section { padding: 1.5rem; }
+  .case-details summary { padding-inline: 1.5rem; }
+  .case-details-body { padding: 1rem 1.5rem 1.5rem; }
   .about-section { gap: 2rem; }
   .capability-list div { grid-template-columns: 1fr; gap: .4rem; }
   .contact-section { min-height: 70svh; }
