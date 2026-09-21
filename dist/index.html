@@ -160,6 +160,59 @@
           </div>
         </article>
       </div>
+
+      <details class="web-case-details reveal">
+        <summary>
+          <span><small>Featured web case</small><strong>AI Chatbot UI 설계 과정</strong></span>
+          <span class="summary-action">사례 자세히 보기 <i aria-hidden="true">＋</i></span>
+        </summary>
+        <div class="web-case-body">
+          <div class="case-origin">
+            <p class="detail-label">Why I started</p>
+            <h4>늘어나는 LLM 서비스에서<br />프론트엔드의 역할을 탐구했습니다.</h4>
+            <p>챗봇과 LLM 기반 서비스의 수요가 늘어나는 흐름을 체감하면서, 일반적인 메시지 UI를 넘어 생성형 응답의 특성을 안정적으로 다루는 인터페이스가 필요하다고 판단해 작업을 시작했습니다.</p>
+          </div>
+
+          <div class="state-flow" aria-label="AI 챗봇 응답 상태 흐름">
+            <p class="detail-label">Response state model</p>
+            <ol>
+              <li><span>01</span><strong>User input</strong><small>메시지 전송</small></li>
+              <li><span>02</span><strong>Thinking</strong><small>응답 준비</small></li>
+              <li><span>03</span><strong>Streaming</strong><small>토큰 단위 렌더링</small></li>
+              <li><span>04</span><strong>Done</strong><small>응답 완료</small></li>
+            </ol>
+            <p class="flow-exception">중단·시간 초과·실패 <span>→</span> 오류 분류 <span>→</span> 재시도</p>
+          </div>
+
+          <div class="web-case-points">
+            <section>
+              <p class="detail-label">01 · State</p>
+              <h5>응답 단계를 명시적인 상태로 모델링</h5>
+              <p>`thinking → streaming → done` 단계를 분리해 로딩, 토큰 렌더링, 완료 상태가 서로 충돌하지 않도록 구성했습니다.</p>
+            </section>
+            <section>
+              <p class="detail-label">02 · Abstraction</p>
+              <h5>스트리밍 공급자 차이 추상화</h5>
+              <p>OpenAI와 Anthropic의 SSE 응답 차이를 공통 인터페이스로 감싸 UI가 공급자 구현에 직접 의존하지 않도록 설계했습니다.</p>
+            </section>
+            <section>
+              <p class="detail-label">03 · Recovery</p>
+              <h5>중단과 실패까지 사용자 흐름에 포함</h5>
+              <p>AbortController 기반 중단, 30초 타임아웃, 오류 유형별 안내와 재시도를 하나의 복구 흐름으로 연결했습니다.</p>
+            </section>
+            <section>
+              <p class="detail-label">04 · UI system</p>
+              <h5>확장 가능한 디자인 토큰 구성</h5>
+              <p>Primitive·Semantic·Component 3단계 토큰과 다크·라이트 테마를 구성해 컴포넌트 간 시각 규칙을 일관되게 유지했습니다.</p>
+            </section>
+          </div>
+
+          <div class="web-case-footer">
+            <p><span>Contribution</span> 기획 100% · 디자인 100% · 개발 100%</p>
+            <div><a href="https://chatbotui-seven-sigma.vercel.app/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/soompy/pf26_chatbot" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+          </div>
+        </div>
+      </details>
     </section>
 
     <section class="section experience-section" id="experience" aria-labelledby="experience-title">
