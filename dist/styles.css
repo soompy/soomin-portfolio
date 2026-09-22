@@ -9,6 +9,7 @@
   --accent-dark: #07150d;
   --blue: #7ca9ff;
   --yellow: #efff70;
+  --pink: #ff7ad9;
   --max: 1280px;
 }
 
@@ -207,10 +208,12 @@ nav a:hover, nav a:focus-visible, .header-link:hover, .header-link:focus-visible
 .related-background strong { font-size: .9rem; font-weight: 600; }
 .related-background span { color: var(--muted); font-size: .84rem; }
 .contact-section { min-height: 75svh; padding: 9rem 0; display: flex; flex-direction: column; justify-content: center; }
+.contact-section { border-top: 2px solid var(--pink); }
+.contact-section .eyebrow { color: var(--pink); }
 .contact-section h2 { max-width: 1000px; margin: 1.5rem 0 4rem; font-size: clamp(3rem, 7vw, 7rem); line-height: 1.05; letter-spacing: -.06em; }
 .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; }
 .contact-links a { min-width: 180px; display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--line); }
-.contact-links a:hover, .contact-links a:focus-visible { border-color: var(--accent); color: var(--accent); }
+.contact-links a:hover, .contact-links a:focus-visible { border-color: var(--pink); color: var(--pink); }
 footer { padding: 1.5rem 0; display: flex; justify-content: space-between; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
 footer p { margin: 0; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
