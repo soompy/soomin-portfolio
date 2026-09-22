@@ -55,6 +55,8 @@ nav a:hover, nav a:focus-visible, .header-link:hover, .header-link:focus-visible
 .section { padding: 9rem 0; border-bottom: 1px solid var(--line); }
 .section-heading { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 2rem; align-items: start; margin-bottom: 5rem; }
 .eyebrow, .project-label, .detail-label { margin: 0; color: var(--accent); font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.section-kind { display: inline-flex; align-items: center; gap: .55rem; }
+.section-kind span { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 12px currentColor; }
 .section-heading h2, .about-intro h2 { margin: 0; font-size: clamp(2.5rem, 4.5vw, 4.5rem); line-height: 1.12; letter-spacing: -.045em; }
 .section-heading > p:last-child { margin: .5rem 0 0; color: var(--muted); }
 .featured-project { background: var(--surface); border: 1px solid var(--line); border-radius: 1rem; overflow: hidden; }
@@ -148,6 +150,11 @@ nav a:hover, nav a:focus-visible, .header-link:hover, .header-link:focus-visible
 .interaction-flow > i { color: var(--accent); font-style: normal; }
 .retrospective-point { background: rgba(140, 255, 182, .035); }
 .section-heading.compact { grid-template-columns: 1fr 3fr; }
+.experience-section .section-kind,
+.experience-section .career-case .eyebrow,
+.experience-section .career-case .detail-label { color: var(--blue); }
+.experience-section .career-case { border-top: 2px solid var(--blue); }
+.experience-section .evidence strong { color: var(--blue); }
 .career-case { margin-bottom: 5rem; background: var(--surface); border: 1px solid var(--line); border-radius: 1rem; overflow: hidden; }
 .career-case-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; padding: 2rem; border-bottom: 1px solid var(--line); }
 .career-case-head h3 { margin: .35rem 0 0; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1; letter-spacing: -.055em; }
