@@ -186,9 +186,14 @@ nav a:hover, nav a:focus-visible, .header-link:hover, .header-link:focus-visible
 .about-lead { margin: 0 0 1.2rem; font-size: 1.4rem; color: var(--text); }
 .about-body > p:not(.about-lead) { color: var(--muted); }
 .capability-list { margin: 3rem 0 0; }
-.capability-list div { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--line); }
+.capability-list div { display: grid; grid-template-columns: 140px 1fr; gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--line); }
 .capability-list dt { color: var(--accent); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; }
 .capability-list dd { margin: 0; color: #c4c9d0; }
+.related-background { margin-top: 3rem; padding: 1.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: .75rem; }
+.related-background ul { margin: 1.25rem 0 0; padding: 0; list-style: none; }
+.related-background li { display: grid; grid-template-columns: 180px 1fr; gap: 1rem; padding: .9rem 0; border-top: 1px solid var(--line); }
+.related-background strong { font-size: .9rem; font-weight: 600; }
+.related-background span { color: var(--muted); font-size: .84rem; }
 .contact-section { min-height: 75svh; padding: 9rem 0; display: flex; flex-direction: column; justify-content: center; }
 .contact-section h2 { max-width: 1000px; margin: 1.5rem 0 4rem; font-size: clamp(3rem, 7vw, 7rem); line-height: 1.05; letter-spacing: -.06em; }
 .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -272,6 +277,7 @@ footer p { margin: 0; }
   .case-details-body { padding: 1rem 1.5rem 1.5rem; }
   .about-section { gap: 2rem; }
   .capability-list div { grid-template-columns: 1fr; gap: .4rem; }
+  .related-background li { grid-template-columns: 1fr; gap: .25rem; }
   .contact-section { min-height: 70svh; }
   footer { flex-direction: column; gap: .75rem; }
 }
