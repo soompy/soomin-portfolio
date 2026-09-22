@@ -8,6 +8,7 @@
   --accent: #8cffb6;
   --accent-dark: #07150d;
   --blue: #7ca9ff;
+  --yellow: #efff70;
   --max: 1280px;
 }
 
@@ -189,6 +190,10 @@ nav a:hover, nav a:focus-visible, .header-link:hover, .header-link:focus-visible
 .timeline-row h3 { margin: 0; font-size: 1.3rem; }
 .timeline-row div p { margin: .2rem 0 0; color: var(--muted); font-size: .85rem; }
 .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+.about-section { border-top: 2px solid var(--yellow); }
+.about-section .eyebrow,
+.about-section .capability-list dt,
+.about-section .related-background .detail-label { color: var(--yellow); }
 .about-body { padding-top: 2rem; }
 .about-lead { margin: 0 0 1.2rem; font-size: 1.4rem; color: var(--text); }
 .about-body > p:not(.about-lead) { color: var(--muted); }
