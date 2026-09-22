@@ -137,11 +137,11 @@
           <div>
             <p class="project-label">SCROLL-DRIVEN EXPERIENCE</p>
             <h3>Interactive Tire</h3>
-            <p>스크롤 진행에 맞춰 장면과 요소가 전환되는 자동차 콘텐츠 페이지로, 사용자 흐름을 방해하지 않는 모션을 실험했습니다.</p>
+            <p>스크롤 위치를 콘텐츠의 타임라인으로 사용해 텍스트, 영상, 이미지가 순차적으로 전개되는 자동차 브랜드 페이지를 구현했습니다.</p>
             <p class="contribution-note" aria-label="프로젝트 기여도">기획 <strong>100%</strong><span>·</span> 디자인 <strong>100%</strong><span>·</span> 개발 <strong>100%</strong></p>
           </div>
           <div class="card-bottom">
-            <ul class="tag-list" aria-label="사용 기술"><li>Vite</li><li>JavaScript</li><li>SCSS</li><li>GSAP</li></ul>
+            <ul class="tag-list" aria-label="사용 기술"><li>Vite</li><li>JavaScript</li><li>SCSS</li><li>IntersectionObserver</li></ul>
             <div class="card-links"><a href="https://pf-2023-interactive-vanilla.vercel.app/" target="_blank" rel="noreferrer">Demo ↗</a><a href="https://github.com/soompy/PF2023_interactiveVanilla" target="_blank" rel="noreferrer">Code ↗</a></div>
           </div>
         </article>
@@ -210,6 +210,56 @@
           <div class="web-case-footer">
             <p><span>Contribution</span> 기획 100% · 디자인 100% · 개발 100%</p>
             <div><a href="https://chatbotui-seven-sigma.vercel.app/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/soompy/pf26_chatbot" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="web-case-details interactive-case reveal">
+        <summary>
+          <span><small>Interaction case</small><strong>Interactive Tire 구현과 회고</strong></span>
+          <span class="summary-action">사례 자세히 보기 <i aria-hidden="true">＋</i></span>
+        </summary>
+        <div class="web-case-body">
+          <div class="case-origin">
+            <p class="detail-label">Project intent</p>
+            <h4>자동차의 성능과 움직임을<br />스크롤 경험으로 전달했습니다.</h4>
+            <p>타이어와 자동차가 가진 역동성을 정적인 소개 화면보다 몰입감 있게 전달하기 위해, 사용자의 스크롤을 장면 전환의 기준으로 사용하는 브랜드 콘텐츠를 기획했습니다.</p>
+          </div>
+
+          <div class="interaction-flow" aria-label="Interactive Tire 인터랙션 흐름">
+            <div><span>Input</span><strong>Scroll position</strong><small>사용자의 탐색 진행도</small></div>
+            <i aria-hidden="true">→</i>
+            <div><span>Calculate</span><strong>Progress mapping</strong><small>구간과 위치 계산</small></div>
+            <i aria-hidden="true">→</i>
+            <div><span>Render</span><strong>Scene update</strong><small>텍스트·영상·이미지 전환</small></div>
+          </div>
+
+          <div class="web-case-points">
+            <section>
+              <p class="detail-label">01 · Narrative</p>
+              <h5>스크롤 구간과 콘텐츠를 연결</h5>
+              <p>전체 콘텐츠 높이를 문장 수로 나누고 현재 스크롤 구간에 해당하는 문장을 강조해 정보를 순차적으로 읽도록 구성했습니다.</p>
+            </section>
+            <section>
+              <p class="detail-label">02 · Video scrubbing</p>
+              <h5>스크롤 위치로 영상 재생 시점 제어</h5>
+              <p>스크롤 이동량을 영상의 `currentTime`에 매핑하고 화면 중앙에 영상을 고정해 사용자가 직접 재생 흐름을 제어하도록 구현했습니다.</p>
+            </section>
+            <section>
+              <p class="detail-label">03 · Viewport</p>
+              <h5>고정 장면과 패럴랙스 구성</h5>
+              <p>요소의 위치와 뷰포트 높이를 계산해 특정 구간에서 장면을 고정하고, 마우스 좌표에 따라 이미지 레이어가 서로 다른 방향으로 움직이도록 만들었습니다.</p>
+            </section>
+            <section class="retrospective-point">
+              <p class="detail-label">04 · Retrospective</p>
+              <h5>현재 관점에서 개선할 지점</h5>
+              <p>스크롤 이벤트 내부의 반복 연산과 옵저버·이벤트 등록을 초기화 단계로 분리하고, `requestAnimationFrame`과 모션 감소 설정을 적용하면 성능과 접근성을 높일 수 있습니다.</p>
+            </section>
+          </div>
+
+          <div class="web-case-footer">
+            <p><span>Contribution</span> 기획 100% · 디자인 100% · 개발 100%</p>
+            <div><a href="https://pf-2023-interactive-vanilla.vercel.app/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/soompy/PF2023_interactiveVanilla" target="_blank" rel="noreferrer">GitHub ↗</a></div>
           </div>
         </div>
       </details>
