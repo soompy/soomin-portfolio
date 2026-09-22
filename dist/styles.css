@@ -178,6 +178,9 @@ nav a:hover, nav a:focus-visible, .header-link:hover, .header-link:focus-visible
 .case-details summary { padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; list-style: none; font-size: .9rem; }
 .case-details summary::-webkit-details-marker { display: none; }
 .case-details summary:hover, .case-details summary:focus-visible { color: var(--accent); }
+.experience-section .case-details summary:hover,
+.experience-section .case-details summary:focus-visible,
+.experience-section .case-details[open] summary span { color: var(--blue); }
 .case-details[open] summary span { transform: rotate(45deg); }
 .case-details summary span { font-size: 1.3rem; transition: transform .2s; }
 .case-details-body { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; padding: 1rem 2rem 2rem; border-top: 1px solid var(--line); }
